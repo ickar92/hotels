@@ -49,4 +49,13 @@ export default {
     line-height: 27px;
   }
 }
+.city {
+  border-bottom: 1px dashed #94c4db;
+}
+
+.city:hover {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 </style>

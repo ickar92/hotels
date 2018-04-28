@@ -27,6 +27,7 @@ export default {
 }
 #app {
   background: #0085c5;
+  margin-top: 100px;
 }
 .container {
   max-width: 856px;
