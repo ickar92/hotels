@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <main>
+    <main class="container">
       <h1>Russian Train Tickets</h1>
       <flight></flight>
-      </main>
+      <flight-options></flight-options>
+    </main>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
 import Flight from './components/Flight.vue';
+import FlightOptions from './components/FlightOptions.vue';
 
 export default {
-  components: { Navigation, Flight },
+  components: { Navigation, Flight, FlightOptions },
 };
 </script>
 
@@ -37,5 +39,10 @@ h1 {
   font-weight: 400;
   line-height: 27px;
   text-align: center;
+  margin-bottom: 50px;
+}
+main {
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 </style>
