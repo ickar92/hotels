@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <navigation></navigation>
+    <app-navigation :menu="menu"></app-navigation>
+
     <main class="container">
       <h1>Russian Train Tickets</h1>
       <flight></flight>
@@ -10,12 +11,54 @@
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue';
+import AppNavigation from './components/AppNavigation.vue';
 import Flight from './components/Flight.vue';
 import FlightOptions from './components/FlightOptions.vue';
 
 export default {
-  components: { Navigation, Flight, FlightOptions },
+  components: { AppNavigation, Flight, FlightOptions },
+  data() {
+    return {
+      menu: [
+        { text: 'search tickets' },
+        { text: 'sapsan' },
+        {
+          text: 'allegro',
+          subMenu: [],
+        },
+        {
+          text: 'trans-siberian',
+          subMenu: [
+            { text: 'Trans-siberian' },
+            { text: 'Trans-siberian' },
+            { text: 'Trans-siberian' },
+          ],
+        },
+        {
+          text: 'faq',
+          subMenu: [{ text: 'Faq' }, { text: 'Faq' }, { text: 'Faq' }],
+        },
+        {
+          text: 'tickets guide',
+          subMenu: [
+            { text: 'Group travel' },
+            { text: 'Ticket types' },
+            { text: 'Child policy' },
+            { text: 'Change ticket request' },
+            { text: 'Cancel tickets' },
+          ],
+        },
+        {
+          text: 'contact us',
+          subMenu: [
+            { text: 'Contact us' },
+            { text: 'Contact us' },
+            { text: 'Contact us' },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -27,7 +70,7 @@ export default {
 }
 #app {
   background: #0085c5;
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 .container {
   max-width: 856px;

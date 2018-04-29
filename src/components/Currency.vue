@@ -32,5 +32,7 @@
   text-transform: uppercase;
   /* Text style for "USD" */
   font-size: 16px;
+  margin-left: 30px;
+  padding-left: 10px;
 }
 </style>

@@ -18,6 +18,7 @@
   font-weight: 400;
   color: #fff;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 #chbx {
   width: 16px;

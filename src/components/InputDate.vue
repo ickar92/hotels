@@ -1,7 +1,7 @@
 <template>
   <div class="input-date">
-      <label class="input-date__label" for="">{{label}}</label>
-      <input class="input-date__input" :id="id" type="date">
+    <label class="input-date__label" for="">{{label}}</label>
+    <input class="input-date__input" :id="id" type="date">
   </div>
 </template>
 
@@ -40,6 +40,9 @@ export default {
       width: 26px;
       height: 26px;
       border-width: thin;
+    }
+    &::-webkit-calendar-picker-indicator {
+      background: url(../assets/calendar.png) no-repeat;
     }
   }
 }

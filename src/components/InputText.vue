@@ -1,7 +1,12 @@
 <template>
   <div class="input-text">
-    <label class="input-text__label" v-bind:for="name">{{label}}</label>
-    <input class="input-text__input" v-bind:id="id" type="text" placeholder="Type city name">
+    <label class="input-text__label" :for="name">{{label}}</label>
+    <input class="input-text__input"
+      :id="id" type="text"
+      placeholder="Type city name"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+      >
     <p class="input-text__example">Ex:
       <span class="city">St. Petersburg</span>,
       <span class="city">Moscow</span>
@@ -11,7 +16,7 @@
 
 <script>
 export default {
-  props: ['label', 'id', 'name'],
+  props: ['label', 'id', 'name', 'value'],
 };
 </script>
 
@@ -32,7 +37,7 @@ export default {
     border: 1px solid #d7d7d7;
     background-color: #ffffff;
     padding-left: 20px;
-    min-width: 390px;
+    min-width: 380px;
     &::placeholder {
       color: #a9a9a9;
       font-family: Tahoma;
