@@ -1,15 +1,9 @@
 <template>
   <div class="input-date">
-    <label class="input-date__label" for="">{{label}}</label>
-    <input class="input-date__input" :id="id" type="date">
+    <label class="input-date__label" for="date1">Departure date:</label>
+    <input class="input-date__input" id="date1" type="date">
   </div>
 </template>
-
-<script>
-export default {
-  props: ['label', 'id'],
-};
-</script>
 
 <style lang="less">
 .input-date {
@@ -46,24 +40,5 @@ export default {
     }
   }
 }
-
-// #date1::-webkit-calendar-picker-indicator {
-//     background: url(img/calendar.png) no-repeat;
-// }
-
-// #date2::-webkit-calendar-picker-indicator {
-//     background-image: url(img/calendar2.png);
-//     background-repeat: no-repeat;
-
-// }
-
-// #date2 {
-//     background-color: #1395d3;
-//     border: 1px solid #0076ad;
-// }
-// #date2::-webkit-calendar-picker-indicator:hover {
-//     background-color: #1395d3;
-
-// }
 </style>
 

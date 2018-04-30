@@ -22,7 +22,6 @@
   background-position: right;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   background-position-x: 60px;
   text-transform: uppercase;
   font-family: Tahoma;
@@ -30,8 +29,6 @@
   font-weight: 400;
   line-height: 27px;
   text-transform: uppercase;
-  /* Text style for "USD" */
-  font-size: 16px;
   margin-left: 30px;
   padding-left: 10px;
 }

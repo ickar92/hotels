@@ -63,4 +63,9 @@ export default {
   border: none;
   cursor: pointer;
 }
+@media screen and (max-width: 880px) {
+  .input-text__input {
+    width: 100%;
+  }
+}
 </style>

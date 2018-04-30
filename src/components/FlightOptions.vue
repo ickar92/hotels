@@ -1,11 +1,11 @@
 <template>
   <div class="flight-options">
     <div>
-      <input-date label="Departure date:" :id="id1"></input-date>
-      <roundtrip></roundtrip>
+      <input-departure-date></input-departure-date>
+      <roundtrip v-bind:checked="checked" v-on:change="checked = $event"></roundtrip>
     </div>
     <div>
-      <input-date label="Return date:" :id="id2"></input-date>
+      <input-return-date :dis="!checked"></input-return-date>
       <currency></currency>
     </div>
     <search-button></search-button>
@@ -13,14 +13,16 @@
 </template>
 
 <script>
-import InputDate from './InputDate.vue';
+import InputDepartureDate from './InputDepartureDate.vue';
+import InputReturnDate from './InputReturnDate.vue';
 import SearchButton from './SearchButton.vue';
 import Roundtrip from './Roundtrip.vue';
 import Currency from './Currency.vue';
 
 export default {
   components: {
-    InputDate,
+    InputDepartureDate,
+    InputReturnDate,
     SearchButton,
     Roundtrip,
     Currency,
@@ -29,6 +31,7 @@ export default {
     return {
       id1: 'date1',
       id2: 'date2',
+      checked: false,
     };
   },
 };

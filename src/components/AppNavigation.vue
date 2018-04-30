@@ -49,6 +49,7 @@ export default {
       return idx === this.openedMenuItemIdx;
     },
     onOutsideMenuClick() {
+      console.log('click');
       this.openedMenuItemIdx = null;
     },
     onMenuItemClick(idx) {
@@ -100,6 +101,9 @@ export default {
     position: relative;
 
     &--active {
+      background: #f75c00;
+    }
+    &:hover {
       background: #f75c00;
     }
 
@@ -172,11 +176,16 @@ ul {
     top: 0;
     display: flex;
     flex-direction: column;
-    background: darkblue;
+    background: #54add8;
+    width: 200px;
+    // padding-left: 10px;
   }
   .nav__btn {
     display: block;
     flex: 1;
+    // padding: 10px;
+    // align-self: center;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 880px) {

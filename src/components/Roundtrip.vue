@@ -1,9 +1,17 @@
 <template>
   <div class="roundtrip">
-      <input id="chbx" type="checkbox">
+      <input id="chbx" type="checkbox" v-bind:checked="checked"
+        v-on:change="$emit('change', $event.target.checked)">
       <label for="chbx">Roundtrip</label>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['checked'],
+};
+</script>
+
 
 <style>
 .roundtrip {
